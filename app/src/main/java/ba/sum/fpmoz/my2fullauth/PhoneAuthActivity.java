@@ -131,7 +131,24 @@ public class PhoneAuthActivity extends AppCompatActivity {
                 } else{
                     verifyPhoneNumberWithCode(mVerificationId, code);
                        //problem
-                   
+                    ref.orderByChild("phonenumber").equalTo(String.valueOf(phoneEt)).addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if(snapshot.exists()){
+                                startActivity(new Intent(String.valueOf(ProfilActivity.class)));
+
+                            }else
+                            {
+                                db.getReference("korisnik").child(user.getUid()).setValue(new Users(phone));
+
+                            }
+                        }
+
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+
+                        }
+                    });
                 }
             }
 
