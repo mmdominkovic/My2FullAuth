@@ -124,7 +124,6 @@ public class PhoneAuthActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String phone=binding.phoneEt.getText().toString().trim();
                 String code = binding.codeEt.getText().toString().trim();
-                final FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
                 DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("korisnik");
                 if (TextUtils.isEmpty(code)) {
                     Toast.makeText(PhoneAuthActivity.this, "Please enter verification code...", Toast.LENGTH_SHORT).show();
@@ -134,6 +133,8 @@ public class PhoneAuthActivity extends AppCompatActivity {
                     ref.orderByChild("phonenumber").equalTo(String.valueOf(phoneEt)).addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            final FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
+
                             if(snapshot.exists()){
                                 startActivity(new Intent(String.valueOf(ProfilActivity.class)));
 

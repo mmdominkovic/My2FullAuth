@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.My2FullAuth">
-        <activity android:name=".ProfilActivity"></activity>
+        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".BioAuth" />
+        <activity android:name=".ProfilActivity" />
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".PhoneAuthActivity"
             android:theme="@style/Theme.Design.NoActionBar">

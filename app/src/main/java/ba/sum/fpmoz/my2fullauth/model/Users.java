@@ -4,27 +4,27 @@ public class Users {
     public String uid;
     public String name;
     public String email;
-    public String password;
+    public String jmbg;
     public String phonenumber;
 
 public  Users(  String phonenumber){
     this.phonenumber=phonenumber;
 };
-    public Users( String name, String email, String password) {
+    public Users( String name, String email, String jmbg) {
 
         this.name = name;
         this.email = email;
-        this.password= password;
+        this.jmbg= jmbg;
 
     }
 
 
-    public String getPassword() {
-        return password;
+    public String getJmbg() {
+        return jmbg;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setJmbg(String password) {
+        this.jmbg = password;
     }
 
     public String getUid() {

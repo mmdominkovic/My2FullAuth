@@ -32,7 +32,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/header_cover_image"
-            android:background="#ebca0707"
+            android:background="@color/red"
             android:elevation="4dp"
             android:paddingBottom="24dp">
 
@@ -62,12 +62,6 @@
                 android:textColor="#fff"
                 android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/logoutBtn"
-                android:layout_marginTop="20dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Logout"/>
         </RelativeLayout>
 
 
@@ -78,32 +72,30 @@
             android:layout_marginTop="5dp"
             android:orientation="vertical">
 
-            <TextView
-                android:layout_width="fill_parent"
+            <Button
+                android:id="@+id/authBtn"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:background="#fff"
-                android:clickable="true"
-                android:elevation="4dp"
-                android:padding="20dp"
-                android:text="Android Profile UI Design" />
+                android:layout_below="@+id/warning"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:background="@color/red"
+                android:drawableLeft="@drawable/ic_baseline_fingerprint_white"
+                android:drawablePadding="10dp"
+                android:text="Authenticate"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF" />/>
 
-            <TextView
-                android:layout_width="fill_parent"
+            <Button
+                android:id="@+id/logoutBtn"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginBottom="3dp"
-                android:layout_marginTop="3dp"
-                android:background="#fff"
-                android:clickable="true"
-                android:elevation="4dp"
-                android:padding="20dp"
-                android:text="Android Profile XMl UI Design" />
-
-
-
-
-
+                android:layout_marginTop="20dp"
+                android:background="@color/red"
+                android:drawableLeft="@drawable/ic_baseline_exit_to_app"
+                android:text="Logout"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>
