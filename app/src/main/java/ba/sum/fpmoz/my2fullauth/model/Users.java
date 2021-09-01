@@ -7,17 +7,19 @@ public class Users {
     public String jmbg;
     public String phonenumber;
 
+
 public  Users(  String phonenumber){
     this.phonenumber=phonenumber;
 };
-    public Users( String name, String email, String jmbg) {
-
+    public Users( String uid, String name, String email, String jmbg) {
+        this.uid=uid;
         this.name = name;
         this.email = email;
         this.jmbg= jmbg;
 
     }
 
+public Users(){}
 
     public String getJmbg() {
         return jmbg;
